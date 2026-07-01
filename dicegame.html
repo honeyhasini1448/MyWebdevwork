@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Dice game</title>
+</head>
+<body>
+    <script>
+
+
+        const luckyno = Math.floor(Math.random()*6)+1 ;
+        document.write("This is the generated random number -" + luckyno);
+
+        while(true){
+
+        guess = prompt("Enter any number between 1 to 6 .");
+
+        if(luckyno == guess){
+            alert("Hurrayy YOU WONNN");
+            break;
+        }
+        else{
+            alert("Better Luck next time");
+        }
+    }
+    
+
+      
+
+    </script>
+</body>
+</html>
