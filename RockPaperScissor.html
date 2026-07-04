@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScissor GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="position:relative;right:10px;font-size:35px;">RockPaperScissor</h1><em><bold style="position:relative;right:10px;top:15px;font-weight:600;">__GAME__</bold></em>
+
+    <div class="container"><br>
+        <p id="displaypara" style="text-align: center;">Click your choice</p><br>
+        
+        <div class="imagecon">
+            <img  src="rock.jpeg" id="rock" alt="rock">
+            <img  src="paper.jpeg" id="paper" alt="paper">
+            <img  src="scissors.jpeg" id="scissor" alt="scissor">
+        </div>
+
+        <div class="displaybox">
+
+            <div class="leftdiv">
+                <h4>UserScoring</h4>
+                <p>Score: <span id="userscore">0</span></p>
+            </div>
+
+            <div class="rightdiv">
+                <h4>ComputerScoring</h4>
+                <p>Score: <span id="compscore">0</span></p>
+            </div>
+
+        </div>
+
+        <div class="Result">
+            <button id="btn">Result</button>
+        </div>
+
+     </div>
+
+     <script src="script1.JS"></script>
+</body>
+</html>
