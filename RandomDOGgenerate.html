@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{ 
+        text-align: center;
+        background-color: bisque;
+        border: 5px solid burlywood;
+        margin: 20px;
+        padding: 10px;
+    }
+    h1{ 
+        font-family: 'Times New Roman', Times, serif;
+        color: saddlebrown;
+    }
+    button{ 
+        width: 300px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: blanchedalmond;
+        color: saddlebrown;
+        border:2px solid brown;
+    }
+    img{
+        border:solid saddlebrown 2px ;
+        width: 400;
+        height: auto;
+    }
+    button:hover{
+        transform: scale(1.1);
+        background-color: rgba(0,0,0,0.1);
+
+    }
+
+</style>
+<body>
+    <h1>Random DOG IMAGE Generation</h1><br>
+    <button onclick="fetchDOGimage()">Get Dog Image & Change</button><br><br>
+    <img id="dogImage" src="" alt="DOG will appear" height="250" width="250">
+
+    <script>
+        function fetchDOGimage(){
+
+            fetch("https://dog.ceo/api/breeds/image/random")
+            
+            .then(response=>response.json())
+
+            .then(data=>{
+                document.getElementById("dogImage").src = data.message
+            })
+            
+            .catch(error=>console.log("Error Fetching Data",error))
+        }
+    </script>
+
+</body>
+</html>
